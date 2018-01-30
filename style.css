@@ -3,5 +3,8 @@ body {
 }
 
 #head {
+  position:relative;
+  top:100px;
+  left:50px;
   color:#0F0;
 }

@@ -3,7 +3,6 @@
 
 @import "{{ site.theme }}";
 
-/*
 body {
 	background-color:#000;
 }
@@ -22,4 +21,3 @@ body {
 	font-weight: 500;
 	line-height: 26.4px;
 }
-*/

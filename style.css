@@ -1,4 +1,8 @@
-@import "{{ hacker.theme }}";
+---
+---
+
+@import "{{ site.theme }}";
+
 /*
 body {
 	background-color:#000;

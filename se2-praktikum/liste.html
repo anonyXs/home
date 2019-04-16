@@ -9,11 +9,20 @@
 
 	
 	<script>
-		const http = new XMLHttpRequest();
 
-		http.open("GET", "https://api.lyrics.ovh/v1/shakira/waka-waka");
-		http.send();
-		document.write(http.responseText);
+		function randomText(i) {
+			var theText = "";
+			fetch('http://www.randomtext.me/api/lorem/p-1/1-20')
+				.then(function(response) {
+					return response.json();
+				})
+				.then(function(myJson) {
+					//console.log(JSON.stringify(myJson));
+					theText = myJson.text_out; // = JSON.stringify(myJson.text_out);
+					document.getElementById("p" + i).innerHTML = theText;
+				});
+		}
+		
 		function addList() {
 			var list_min = 0;
 			var list_max = 10;
@@ -27,10 +36,11 @@
 							"<b>anonyXs</b> @admin Mo 08. April 2019</br>" +
 						"</div>" +
 						"<div class='listItemBody'>" +
-							"Wow, das ist ja eine coole Liste!" +
+							"<p id='p" + i + "'>Wow, das ist ja eine coole Liste!</p>" +
 						"</div>" +
 					"</div>" +
 				"</li>");
+				randomText(i);
 			}
 		}
 	</script>

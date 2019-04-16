@@ -4,16 +4,7 @@
 @import "{{ site.theme }}";
 
 body {
-	background-color:#000;
-}
-
-#head {
-	position:relative;
-	top:100px;
-	left:50px;
-	width:500px;
-	height:200px;
-	color:#0F0;
+	background-color:#000;color:#0F0;
 	font-family: Consolas, monaco, monospace;
 	font-size: 24px;
 	font-style: normal;

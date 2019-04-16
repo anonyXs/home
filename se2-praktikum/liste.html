@@ -9,6 +9,11 @@
 
 	
 	<script>
+		const http = new XMLHttpRequest();
+
+		http.open("GET", "https://api.lyrics.ovh/v1/shakira/waka-waka");
+		http.send();
+		document.write(http.responseText);
 		function addList() {
 			var list_min = 0;
 			var list_max = 10;
